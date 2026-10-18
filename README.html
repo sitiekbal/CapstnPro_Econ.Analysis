@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Global Economic Data — Capstone Project: Economic Analysis</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Global Economic Data — panel dataset for six countries (2000-2023). EDA, modeling, forecasting.">
+  <style>
+    /* GitHub-like readable typography & layout */
+    :root{
+      --bg:#f6f8fa;
+      --card:#fff;
+      --muted:#6a737d;
+      --accent:#0366d6;
+      --border:#e1e4e8;
+      --code-bg:#f6f8fa;
+      --shadow: 0 1px 3px rgba(27,31,35,0.04);
+      --radius:6px;
+      --max-width:980px;
+    }
+    html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji";background:var(--bg);color:#222}
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:24px}
+    header.repo{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .repo h1{font-size:20px;margin:0;}
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    h1,h2,h3{color:#0b1220}
+    h1{font-size:28px;margin:0 0 8px 0}
+    h2{font-size:18px;margin-top:20px}
+    p,li{font-size:15px;line-height:1.55;color:#24292f}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    pre, code {
+      font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size:13px;
+      background:var(--code-bg);
+      color:#222;
+      border-radius:6px;
+    }
+    pre {
+      padding:16px;
+      overflow:auto;
+      border:1px solid var(--border);
+      background:#f6f8fa;
+    }
+    code.inline{padding:0.2em 0.4em;border-radius:6px;background:#f1f3f5}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{border:1px solid var(--border);padding:10px;text-align:left;font-size:14px}
+    th{background:#f6f8fa}
+    .note{background:#fff7e6;border-left:4px solid #ffd33d;color:#392e00;padding:12px;border-radius:6px;margin:18px 0}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .small{font-size:13px;color:var(--muted)}
+    .code-block{background:#f6f8fa;border:1px solid var(--border);padding:12px;border-radius:6px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media(min-width:900px){
+      .grid{grid-template-columns: 1fr 300px}
+      .aside{padding-left:18px}
+      .main{padding-right:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="repo">
+      <div>
+        <svg height="32" width="32" viewBox="0 0 16 16" aria-hidden="true"><path fill="#2f6fda" d="M2 2h12v12H2z"></path></svg>
+      </div>
+      <div>
+        <h1>Global Economic Data — Capstone Project: Economic Analysis 📊</h1>
+        <div class="meta">Prepared By: <strong>sitiekbal</strong> · Dataset: <strong>Global Economic Data</strong></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <main class="main card">
+        <section>
+          <p>
+            This repository contains a panel dataset of macroeconomic, social, and environmental indicators for six countries
+            (<strong>USA, Russia, Canada, China, India, Australia</strong>) covering the years <strong>2000–2023</strong>.
+            The dataset includes GDP, GDP per capita, population metrics, health and education indicators, energy and emissions,
+            infrastructure and transport measures, and governance/social indices.
+          </p>
+
+          <p class="small">
+            Raw CSV (source):
+            <a href="https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/main/Global%20Economic%20Data.csv" target="_blank" rel="noreferrer">
+              raw.githubusercontent.com/.../Global%20Economic%20Data.csv
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Research objectives (examples)</h2>
+          <ol>
+            <li>Identify the main drivers of GDP and GDP per capita across countries and over time.</li>
+            <li>Quantify trade-offs between economic growth and environmental outcomes (CO2 emissions, renewable share).</li>
+            <li>Evaluate how human capital investments (education and healthcare) relate to growth and HDI.</li>
+            <li>Build and validate short-to-medium-term forecasts for GDP / GDP per capita to 2030 and run policy scenarios.</li>
+            <li>Cluster countries into development archetypes and compare policy implications.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Dataset overview</h2>
+          <ul>
+            <li><strong>File name:</strong> <code>Global Economic Data.csv</code></li>
+            <li><strong>Time horizon:</strong> 2000 – 2023 (annual)</li>
+            <li><strong>Countries:</strong> USA, Russia, Canada, China, India, Australia</li>
+            <li><strong>Themes:</strong> Macroeconomics, demography, human capital, health, education, energy &amp; emissions, infrastructure, governance, tourism, social outcomes</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Data dictionary (selected fields)</h2>
+          <table>
+            <thead><tr><th>Column</th><th>Type</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Country</td><td>String</td><td>Country name (USA, Russia, Canada, China, India, Australia)</td></tr>
+              <tr><td>Year</td><td>Integer</td><td>Year (2000–2023)</td></tr>
+              <tr><td>GDP (in Trillions USD)</td><td>Float</td><td>Nominal GDP in trillions of USD</td></tr>
+              <tr><td>GDP per Capita (in USD)</td><td>Float</td><td>GDP per person in USD</td></tr>
+              <tr><td>Population (in Millions)</td><td>Float</td><td>Total population (millions)</td></tr>
+              <tr><td>CO2 Emissions (Million Metric Tons)</td><td>Float</td><td>Annual CO2 emissions (million metric tons)</td></tr>
+              <tr><td>Human Development Index (HDI)</td><td>Float</td><td>HDI index (0–1 or 0–100 — validate units)</td></tr>
+              <tr><td>Renewable Energy Share (%)</td><td>Float</td><td>Share of energy from renewables (percent)</td></tr>
+              <tr><td>Internet Penetration (%)</td><td>Float</td><td>Share of population using the internet (percent)</td></tr>
+              <tr><td>Healthcare Expenditure per Capita (USD)</td><td>Float</td><td>Annual healthcare spending per person (USD)</td></tr>
+            </tbody>
+          </table>
+
+          <div class="note">
+            <strong>Notes:</strong>
+            <ul>
+              <li>Percent-like columns are commonly in 0–100 format in the CSV; HDI/Gender index may be 0–1 or 0–100 — validate and rescale as needed.</li>
+              <li>GDP is in trillions and population in millions. Quick check: <code>computed_GDP_per_capita ≈ (GDP_in_Trillions_USD * 1_000_000) / Population_in_Millions</code>.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Data quality &amp; cleaning notes</h2>
+          <ul>
+            <li><strong>Missingness:</strong> run a full missingness audit — the pasted CSV shows few blank cells but validate programmatically.</li>
+            <li><strong>Units:</strong> confirm whether HDI and Gender Equality Index are 0–1 or 0–100 and rescale consistently.</li>
+            <li><strong>Implausible values:</strong> literacy slightly >100 in some rows; cap at 100 or verify source. Validate doctor-to-patient units and large counts (airports, road km).</li>
+            <li><strong>Skew &amp; outliers:</strong> CO2 emissions &amp; energy use are skewed — consider log transforms or per-capita normalization for modeling.</li>
+            <li><strong>Structural events:</strong> 2008 and 2020 affect many series — include event dummies or conduct breakpoint tests for forecasting.</li>
+            <li><strong>Derived checks:</strong> recompute GDP per capita from GDP and population to detect inconsistencies.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Quick usage example (Python / pandas)</h2>
+          <div class="code-block">
+<pre><code>import pandas as pd
+import numpy as np
+
+RAW_URL = "https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/main/Global%20Economic%20Data.csv"
+df = pd.read_csv(RAW_URL)
+
+# tidy column names
+df.columns = [c.strip() for c in df.columns]
+
+# convert Year and numeric columns
+df['Year'] = pd.to_numeric(df['Year'], errors='coerce').astype('Int64')
+numeric_cols = df.columns.drop(['Country','Year'])
+df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
+
+# missingness
+missing = df.isna().sum().sort_values(ascending=False)
+print("Missing values per column:\n", missing[missing>0])
+
+# validate GDP per capita (approx)
+df['GDP_per_capita_check'] = (df['GDP (in Trillions USD)'] * 1_000_000) / df['Population (in Millions)']
+df['gdp_percap_diff'] = df['GDP per Capita (in USD)'] - df['GDP_per_capita_check']
+print("Max absolute difference:", np.nanmax(np.abs(df['gdp_percap_diff'])))</code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>Suggested analyses &amp; projects</h2>
+          <ol>
+            <li>Exploratory Data Analysis (EDA): trends, cross-country comparisons, rolling correlations, outlier detection.</li>
+            <li>Econometric analysis: panel regressions (fixed/random effects), dynamic panels (Arellano–Bond).</li>
+            <li>Forecasting: ARIMA/VAR/PVAR, ML (XGBoost, LightGBM), and time-series deep models (LSTM) for GDP/GDP per capita.</li>
+            <li>Sustainability trade-offs: joint modeling of GDP and CO2 emissions and scenario analysis (renewable adoption).</li>
+            <li>Clustering &amp; archetypes: PCA + clustering to identify development groups and policy implications.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Next steps / recommended tooling</h2>
+          <ul>
+            <li>Run the provided EDA scripts or the included notebook to generate diagnostics, charts, and cleaned data.</li>
+            <li>Engineer features: per-capita and log transforms (e.g., log GDP, CO2 per capita, energy per capita).</li>
+            <li>For panel regressions: include country fixed effects and year dummies. For forecasting: use rolling-origin CV.</li>
+          </ul>
+        </section>
+
+        <footer>
+          If you'd like, I can produce a ready-to-run Jupyter notebook (.ipynb) that executes the full EDA and saves outputs, or
+          generate feature-engineering code to create a model-ready dataset (lags, growth rates, per-capita transforms, imputation flags).
+        </footer>
+      </main>
+
+      <aside class="aside card">
+        <h3>Quick links</h3>
+        <ul class="small">
+          <li><a href="https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/main/Global%20Economic%20Data.csv" target="_blank">Raw CSV</a></li>
+          <li><a href="#usage-example">Usage example (Python)</a></li>
+        </ul>
+
+        <h3 style="margin-top:14px">Basic stats</h3>
+        <p class="small">6 countries · 2000–2023 · ~144 rows · 35+ numeric columns</p>
+
+        <h3 style="margin-top:14px">Caveats</h3>
+        <p class="small">Check units for HDI/Gender index, cap literacy at 100, and verify doctor-to-patient ratio units before interpretation.</p>
+
+        <h3 style="margin-top:14px">Contact</h3>
+        <p class="small">Prepared by <strong>sitiekbal</strong></p>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
