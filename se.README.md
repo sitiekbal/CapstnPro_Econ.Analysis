@@ -97,7 +97,6 @@ Using unsupervised **K-Means clustering** ($K=3$) on multi-dimensional performan
 
 
 
-[![Logo](logo.svg)](https://github.com)
 
 # Global Economic Data — Capstone Project: Economic Analysis 📊
 
