@@ -2,6 +2,9 @@
 **Capstone Project: Economic Analysis Global**
 * Prepared By: Siti Ekbal
 * Dataset Used: Global Economic Data
+
+
+
 # Economic Data
 
 Annual panel data (2000–2023) for six countries—USA, Russia, Canada, China, India, and Australia—documenting a broad set of indicators: national output (GDP and GDP per head), population dynamics, health and schooling metrics, energy and environmental variables, transport/infrastructure counts, and governance/social indices.
@@ -90,3 +93,76 @@ Using unsupervised **K-Means clustering** ($K=3$) on multi-dimensional performan
 1. **Archetype 0 (High-Wealth, Fossil-leaning Urban Centers):** Highly urbanized (~84%), extremely clean institutions, very high wealth, but heavily reliant on fossil energy (renewables make up only ~19.9% of the mix).
 2. **Archetype 1 (Developing / Transitional States):** Rapidly industrializing economies with high population growth, lower per-capita GDP, and lower urbanization (~56.1%).
 3. **Archetype 2 (High-Wealth, Green Innovators):** High-wealth economies with very clean institutions and an exceptionally high share of renewable/clean energy (~67.3%), demonstrating that absolute wealth and transition grids can coexist.
+
+
+
+
+[![Logo](logo.svg)](https://github.com)
+
+# Global Economic Data — Capstone Project: Economic Analysis 📊
+
+Prepared By: **sitiekbal** · Dataset: **Global Economic Data**
+
+This repository contains a panel dataset of macroeconomic, social, and environmental indicators for six countries (**USA, Russia, Canada, China, India, Australia**) covering the years **2000–2023**. The dataset includes GDP, GDP per capita, population metrics, health and education indicators, energy and emissions, infrastructure and transport measures, and governance/social indices.
+
+Raw CSV (source): [://githubusercontent.com](https://githubusercontent.com)
+
+## Research objectives (examples)
+
+1. Identify the main drivers of GDP and GDP per capita across countries and over time.
+2. Quantify trade-offs between economic growth and environmental outcomes (CO2 emissions, renewable share).
+3. Evaluate how human capital investments (education and healthcare) relate to growth and HDI.
+4. Build and validate short-to-medium-term forecasts for GDP / GDP per capita to 2030 and run policy scenarios.
+5. Cluster countries into development archetypes and compare policy implications.
+
+## Dataset overview
+
+* **File name:** `Global Economic Data.csv`
+* **Time horizon:** 2000 – 2023 (annual)
+* **Countries:** USA, Russia, Canada, China, India, Australia
+* **Themes:** Macroeconomics, demography, human capital, health, education, energy & emissions, infrastructure, governance, tourism, social outcomes
+
+## Data dictionary (selected fields)
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| Country | String | Country name (USA, Russia, Canada, China, India, Australia) |
+| Year | Integer | Year (2000–2023) |
+| GDP (in Trillions USD) | Float | Nominal GDP in trillions of USD |
+| GDP per Capita (in USD) | Float | GDP per person in USD |
+| Population (in Millions) | Float | Total population (millions) |
+| CO2 Emissions (Million Metric Tons) | Float | Annual CO2 emissions (million metric tons) |
+| Human Development Index (HDI) | Float | HDI index (0–1 or 0–100 — validate units) |
+| Renewable Energy Share (%) | Float | Share of energy from renewables (percent) |
+| Internet Penetration (%) | Float | Share of population using the internet (percent) |
+| Healthcare Expenditure per Capita (USD) | Float | Annual healthcare spending per person (USD) |
+
+> **Notes:**
+> * Percent-like columns are commonly in 0–100 format in the CSV; HDI/Gender index may be 0–1 or 0–100 — validate and rescale as needed.
+> * GDP is in trillions and population in millions. Quick check: `computed_GDP_per_capita ≈ (GDP_in_Trillions_USD * 1_000_000) / Population_in_Millions`.
+
+## Analytical Insights & Visualizations 📉
+
+### 1. Macroeconomic Trajectories (2000–2023)
+The line plot tracks historical absolute nominal GDP changes across all tracked development systems, highlighting divergent regional growth curves.
+
+![GDP Trends over Time](gdp_trends_2000_2023.png)
+
+### 2. Economic Scaling vs. Carbon Footprints
+This diagnostic scatter view shows the structural correlation between expanding economic capacity and gross national CO₂ emissions.
+
+![GDP vs CO2 Emissions](gdp_vs_co2_scatter.png)
+
+### 3. Indicator Interdependencies
+The programmatic matrix exposes underlying connections between baseline investments (Education/Healthcare), infrastructure access (Internet), and social index changes (HDI).
+
+![Macroeconomic Correlation Heatmap](macroeconomic_correlation_matrix.png)
+
+## Data quality & cleaning notes
+
+* **Missingness:** run a full missingness audit — the pasted CSV shows few blank cells but validate programmatically.
+* **Units:** confirm whether HDI and Gender Equality Index are 0–1 or 0–100 and rescale consistently.
+* **Implausible values:** literacy slightly >100 in some rows; cap at 100 or verify source. Validate doctor-to-patient units and large counts (airports, road km).
+* **Skew & outliers:** CO2 emissions & energy use are skewed — consider log transforms or per-capita normalization for modeling.
+* **Structural events:** 2008 and 2020 affect many series — include event dummies or conduct breakpoint tests for forecasting.
+* **Derived checks:** recompute GDP per capita from GDP and population to detect inconsistencies.
