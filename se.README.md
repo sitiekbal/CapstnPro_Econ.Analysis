@@ -10,21 +10,31 @@ https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/m
 
 This dataset is well suited for cross-country panel analysis, exploratory data analysis (EDA), growth and sustainability modeling, and short-to-medium term forecasting and scenario analysis.
 
-*Research objectives*
+## Objectives
 
-Identify the main drivers of GDP and GDP per capita across countries and over time.
-Quantify trade-offs between economic growth and environmental outcomes (CO2 emissions, renewable share).
-Evaluate how human capital investments (education and healthcare) relate to growth and HDI.
-Build and validate short-to-medium-term forecasts for GDP / GDP per capita to 2030 and run policy scenarios.
-Cluster countries into development archetypes and compare policy implications.
+1. *Identify the main drivers of GDP and GDP per capita across countries and over time.*
 
-*Dataset overview*
+2. *Quantify trade-offs between economic growth and environmental outcomes (CO2 emissions, renewable share).*
 
-File name: Global Economic Data.csv
-Time horizon: 2000 – 2023 (annual)
-Countries covered: USA, Russia, Canada, China, India, Australia
-Key themes: Macroeconomics, demography, human capital, health, education, energy & emissions, infrastructure, governance, tourism, social outcomes
+3. *Evaluate how human capital investments (education and healthcare) relate to growth and HDI.*
 
+4. *Build and validate short-to-medium-term forecasts for GDP / GDP per capita to 2030 and run policy scenarios.*
+
+5. *Cluster countries into development archetypes and compare policy implications.*
+
+
+
+  <section>
+          <h2>Dataset overview</h2>
+          <ul>
+            <li><strong>File name:</strong> <code>Global Economic Data.csv</code></li>
+            <li><strong>Time horizon:</strong> 2000 – 2023 (annual)</li>
+            <li><strong>Countries:</strong> USA, Russia, Canada, China, India, Australia</li>
+            <li><strong>Themes:</strong> Macroeconomics, demography, human capital, health, education, energy &amp; emissions, infrastructure, governance, tourism, social outcomes</li>
+          </ul>
+        </section>
+								
+ 
  Link to Jupyter Notebook in Google Colab:
  (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh)
 
