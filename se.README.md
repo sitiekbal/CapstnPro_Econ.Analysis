@@ -39,13 +39,22 @@ Based on the variables present in the dataset, the following five core research 
 
 Link to Jupyter Notebook in Google Colab:
 (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh)
- 
-## Dataset overview
 
-* **File name:** `Global Economic Data.csv`
-* **Time horizon:** 2000 – 2023 (annual)
-* **Countries:** USA, Russia, Canada, China, India, Australia
-* **Themes:** Macroeconomics, demography, human capital, health, education, energy & emissions, infrastructure, governance, tourism, social outcomes
+
+## Dataset Overview & Data Cleaning
+Before running statistical evaluations, a comprehensive sanity check was conducted on `Global Economic Data.csv`:
+* **Shape:** Balanced panel data covering multiple countries across 24 consecutive years.
+* **Missing Value Treatment:** Imputation/removal steps implemented for missing values to maintain data continuity.
+* **Outlier Verification:** Hyperinflation instances and abnormal spikes in unemployment were validated against historic historical economic narratives rather than treated purely as mechanical noise.
+* **Missingness:** run a full missingness audit — the pasted CSV shows few blank cells but validate programmatically.
+* **Units:** confirm whether HDI and Gender Equality Index are 0–1 or 0–100 and rescale consistently.
+* **GDP:** is in trillions and population in millions. Quick check: `computed_GDP_per_capita ≈ (GDP_in_Trillions_USD * 1_000_000) / Population_in_Millions`.
+* **Implausible values:** literacy slightly >100 in some rows; cap at 100 or verify source.
+* **Skew & outliers:** CO2 emissions & energy use are skewed — consider log transforms or per-capita normalization for modeling.
+* **Derived checks:** recompute GDP per capita from GDP and population to detect inconsistencies.
+* **Implication:** The lack of a strong, positive, statistically significant link between GDP growth and emission increases suggests that these nations are successfully undergoing **structural decoupling**, where economic expansion no longer guarantees a proportional rise in greenhouse gas emissions.
+
+
 
 ## Data dictionary
 
@@ -62,26 +71,6 @@ Link to Jupyter Notebook in Google Colab:
 | Internet Penetration (%) | Float | Share of population using the internet (percent) |
 | Healthcare Expenditure per Capita (USD) | Float | Annual healthcare spending per person (USD) |
 
-> **Notes:**
-> * Percent-like columns are commonly in 0–100 format in the CSV; HDI/Gender index may be 0–1 or 0–100 — validate and rescale as needed.
-> * GDP is in trillions and population in millions. Quick check: `computed_GDP_per_capita ≈ (GDP_in_Trillions_USD * 1_000_000) / Population_in_Millions`.
-
-## Data quality & cleaning notes
-
-* **Missingness:** run a full missingness audit — the pasted CSV shows few blank cells but validate programmatically.
-* **Units:** confirm whether HDI and Gender Equality Index are 0–1 or 0–100 and rescale consistently.
-* **Implausible values:** literacy slightly >100 in some rows; cap at 100 or verify source. Validate doctor-to-patient units and large counts (airports, road km).
-* **Skew & outliers:** CO2 emissions & energy use are skewed — consider log transforms or per-capita normalization for modeling.
-* **Structural events:** 2008 and 2020 affect many series — include event dummies or conduct breakpoint tests for forecasting.
-* **Derived checks:** recompute GDP per capita from GDP and population to detect inconsistencies.
-* **Implication:** The lack of a strong, positive, statistically significant link between GDP growth and emission increases suggests that these nations are successfully undergoing **structural decoupling**, where economic expansion no longer guarantees a proportional rise in greenhouse gas emissions.
-
-
-## Dataset Overview & Data Cleaning
-Before running statistical evaluations, a comprehensive sanity check was conducted on `Global Economic Data.csv`:
-* **Shape:** Balanced panel data covering multiple countries across 24 consecutive years.
-* **Missing Value Treatment:** Imputation/removal steps implemented for missing values to maintain data continuity.
-* **Outlier Verification:** Hyperinflation instances and abnormal spikes in unemployment were validated against historic historical economic narratives rather than treated purely as mechanical noise.
 
 ---
 
