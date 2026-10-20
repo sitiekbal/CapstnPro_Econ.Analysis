@@ -1,8 +1,8 @@
-
 **Capstone Project: Economic Analysis Global**
 * Prepared By: Siti Ekbal
 * Dataset Used: Global Economic Data
 
+<img width="1147" height="396" alt="image" src="https://github.com/user-attachments/assets/73848cf2-7747-4b59-820b-3ea20d1c14e2" />
 
 
 # Economic Data
