@@ -17,7 +17,7 @@ This dataset is well suited for cross-country panel analysis, exploratory data a
 
 ---
 
-# Capstone Research Objectives
+# Research Objectives
 
 Based on the variables present in the dataset, the following five core research objectives have been established to guide the exploratory and advanced analysis of global economic trends from 2000 to 2023.
 
