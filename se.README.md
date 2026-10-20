@@ -14,16 +14,31 @@ https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/m
 
 This dataset is well suited for cross-country panel analysis, exploratory data analysis (EDA), growth and sustainability modeling, and short-to-medium term forecasting and scenario analysis. Report outlines a structured approach to analyzing global macro-economic indicators (GDP, Inflation, and Unemployment) spanning from **2000 to 2023**. The analysis reveals critical long-term growth shifts, structural shocks from major global events (such as the 2008 Financial Crisis and the 2020 COVID-19 Pandemic), and cyclical macroeconomic variations.
 
-## Research objectives
 
-1. Identify the main drivers of GDP and GDP per capita across countries and over time.
-2. Quantify trade-offs between economic growth and environmental outcomes (CO2 emissions, renewable share).
-3. Evaluate how human capital investments (education and healthcare) relate to growth and HDI.
-4. Build and validate short-to-medium-term forecasts for GDP / GDP per capita to 2030 and run policy scenarios.
-5. Cluster countries into development archetypes and compare policy implications.
+---
 
- Link to Jupyter Notebook in Google Colab:
- (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh)
+# Capstone Research Objectives
+
+Based on the variables present in the dataset, the following five core research objectives have been established to guide the exploratory and advanced analysis of global economic trends from 2000 to 2023.
+
+---
+
+### 📊 Descriptive Objectives (Exploration & Trend Assessment)
+
+*   **Objective 1 (GDP & Shock Velocity):** To chart and profile the long-term trends and structural variance in **GDP (in Trillions USD)** across all monitored countries between **2000 and 2023**, explicitly diagnosing how quickly each economy recovered from external shocks like the **2008 Financial Crisis** and the **2020 Pandemic**.
+*   **Objective 2 (Labor & Price Stability Dynamics):** To evaluate and contrast the distribution, spread, and volatility profiles of the **Unemployment Rate (%)** and **Inflation Rate (%)** across different nations to test the real-world application of traditional economic trade-off models (such as the Phillips Curve).
+*   **Objective 3 (Sustainability & Human Progress Links):** To cross-examine the statistical correlation structures between industrial progress metrics—specifically **CO2 Emissions** and **Energy Consumption**—against societal benchmarks like the **Human Development Index (HDI)** and the **Renewable Energy Share (%)**.
+
+---
+
+### 🔮 Predictive Objectives (Modeling & Forecasting)
+
+*   **Objective 4 (Quality of Life Forecasting):** To construct a multivariate regression framework to model and estimate future movements in the **Human Development Index (HDI)**, testing the relative impact strength of infrastructure spending (like **Healthcare** and **Education Expenditures**) versus technological shifts like **Internet Penetration (%)**.
+*   **Objective 5 (Environmental Impact Projections):** To build a predictive time-series simulation evaluating how upcoming changes in economic output (**GDP**) and clean energy transitions (**Renewable Energy Share (%)**) will dynamically influence long-term national **CO2 Emissions** profiles.
+
+
+Link to Jupyter Notebook in Google Colab:
+(https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh)
  
 ## Dataset overview
 
@@ -82,6 +97,3 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 
 ### 💼 Metric C: Labor Markets & Structural Unemployment
 * **Economic Buffers:** Evaluation of how resilient domestic labor markets were when confronted by systemic global growth contractions. 
-
----
-
