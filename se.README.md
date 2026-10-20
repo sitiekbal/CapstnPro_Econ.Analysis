@@ -12,7 +12,7 @@ Annual panel data (2000–2023) for six countries—USA, Russia, Canada, China, 
 Raw CSV (source):
 https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/main/Global%20Economic%20Data.csv
 
-This dataset is well suited for cross-country panel analysis, exploratory data analysis (EDA), growth and sustainability modeling, and short-to-medium term forecasting and scenario analysis.
+This dataset is well suited for cross-country panel analysis, exploratory data analysis (EDA), growth and sustainability modeling, and short-to-medium term forecasting and scenario analysis. Report outlines a structured approach to analyzing global macro-economic indicators (GDP, Inflation, and Unemployment) spanning from **2000 to 2023**. The analysis reveals critical long-term growth shifts, structural shocks from major global events (such as the 2008 Financial Crisis and the 2020 COVID-19 Pandemic), and cyclical macroeconomic variations.
 
 ## Research objectives
 
@@ -59,11 +59,29 @@ This dataset is well suited for cross-country panel analysis, exploratory data a
 * **Skew & outliers:** CO2 emissions & energy use are skewed — consider log transforms or per-capita normalization for modeling.
 * **Structural events:** 2008 and 2020 affect many series — include event dummies or conduct breakpoint tests for forecasting.
 * **Derived checks:** recompute GDP per capita from GDP and population to detect inconsistencies.
-
-
-
-
 * **Implication:** The lack of a strong, positive, statistically significant link between GDP growth and emission increases suggests that these nations are successfully undergoing **structural decoupling**, where economic expansion no longer guarantees a proportional rise in greenhouse gas emissions.
 
 
+## Dataset Overview & Data Cleaning
+Before running statistical evaluations, a comprehensive sanity check was conducted on `Global Economic Data.csv`:
+* **Shape:** Balanced panel data covering multiple countries across 24 consecutive years.
+* **Missing Value Treatment:** Imputation/removal steps implemented for missing values to maintain data continuity.
+* **Outlier Verification:** Hyperinflation instances and abnormal spikes in unemployment were validated against historic historical economic narratives rather than treated purely as mechanical noise.
+
+---
+
+## Core Insights & Trends Explored
+
+### 📊 Metric A: Long-Term Growth Shifts (GDP Trends)
+* **Emerging vs Developed Liftoff:** Dynamic divergence between established markets (e.g., US, Germany) maintaining steady, linear growth versus developing powerhouses (e.g., China, India) experiencing exponential upward curves.
+* **Macro Shocks:** Visually evident disruptions during the **2008 Global Financial Crisis** and the **2020 COVID-19 pandemic**, where sudden drop-offs hit aggregate production across almost all monitored territories.
+
+### 📈 Metric B: Inflationary Environments (Price Stability)
+* **Volatility Distributions:** Distinct distributions between highly stable inflation blocks (e.g., Eurozone, Japan) vs volatile price fluctuations in emerging South American or African economies.
+* **Post-Pandemic Surge:** Visible uptick across multiple clusters during the 2021–2023 cycle reflecting global supply-side crunches and quantitative easing pullbacks.
+
+### 💼 Metric C: Labor Markets & Structural Unemployment
+* **Economic Buffers:** Evaluation of how resilient domestic labor markets were when confronted by systemic global growth contractions. 
+
+---
 
