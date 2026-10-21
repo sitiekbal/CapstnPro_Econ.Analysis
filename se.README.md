@@ -1,45 +1,21 @@
-**Capstone Project: Economic Analysis Global**
+**Capstone Project: Global Economic Analysis **
 * Prepared By: Siti Ekbal
 * Dataset Used: Global Economic Data
 
 <img width="1147" height="396" alt="image" src="https://github.com/user-attachments/assets/73848cf2-7747-4b59-820b-3ea20d1c14e2" />
 
 
-# Economic Data
+# 🌍 Global Economic Data & Green Transition Analysis (2000–2023)
 
-Annual panel data (2000–2023) for six countries—USA, Russia, Canada, China, India, and Australia—documenting a broad set of indicators: national output (GDP and GDP per head), population dynamics, health and schooling metrics, energy and environmental variables, transport/infrastructure counts, and governance/social indices.
+## 📌 Project Overview
+This project investigates the macro-level relationships between **economic growth (GDP)**, **energy consumption**, **renewable energy adoption**, and **CO2 emissions** across 6 major global economies (**USA, Russia, Canada, China, India, Australia**) from **2000 to 2023**. 
+
+The goal of this repository is to provide a clean exploratory data analysis (EDA) pipeline and blueprint for an interactive dashboard that visualizes how major powers are balancing economic expansion with environmental sustainability.
+
+---
 
 Raw CSV (source):
 https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/main/Global%20Economic%20Data.csv
-
-This dataset is well suited for cross-country panel analysis, exploratory data analysis (EDA), growth and sustainability modeling, and short-to-medium term forecasting and scenario analysis. Report outlines a structured approach to analyzing global macro-economic indicators (GDP, Inflation, and Unemployment) spanning from **2000 to 2023**. The analysis reveals critical long-term growth shifts, structural shocks from major global events (such as the 2008 Financial Crisis and the 2020 COVID-19 Pandemic), and cyclical macroeconomic variations.
-
-
----
-
-# Research Objectives
-
-Based on the variables present in the dataset, the following five core research objectives have been established to guide the exploratory and advanced analysis of global economic trends from 2000 to 2023.
-
----
-
-### 📊 Descriptive Objectives (Exploration & Trend Assessment)
-
-*   **Objective 1 (GDP & Shock Velocity):** To chart and profile the long-term trends and structural variance in **GDP (in Trillions USD)** across all monitored countries between **2000 and 2023**, explicitly diagnosing how quickly each economy recovered from external shocks like the **2008 Financial Crisis** and the **2020 Pandemic**.
-*   **Objective 2 (Labor & Price Stability Dynamics):** To evaluate and contrast the distribution, spread, and volatility profiles of the **Unemployment Rate (%)** and **Inflation Rate (%)** across different nations to test the real-world application of traditional economic trade-off models (such as the Phillips Curve).
-*   **Objective 3 (Sustainability & Human Progress Links):** To cross-examine the statistical correlation structures between industrial progress metrics—specifically **CO2 Emissions** and **Energy Consumption**—against societal benchmarks like the **Human Development Index (HDI)** and the **Renewable Energy Share (%)**.
-
----
-
-### 🔮 Predictive Objectives (Modeling & Forecasting)
-
-*   **Objective 4 (Quality of Life Forecasting):** To construct a multivariate regression framework to model and estimate future movements in the **Human Development Index (HDI)**, testing the relative impact strength of infrastructure spending (like **Healthcare** and **Education Expenditures**) versus technological shifts like **Internet Penetration (%)**.
-*   **Objective 5 (Environmental Impact Projections):** To build a predictive time-series simulation evaluating how upcoming changes in economic output (**GDP**) and clean energy transitions (**Renewable Energy Share (%)**) will dynamically influence long-term national **CO2 Emissions** profiles.
-
-
-Link to Jupyter Notebook in Google Colab:
-(https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh)
-
 
 ## Dataset Overview & Data Cleaning
 Before running statistical evaluations, a comprehensive sanity check was conducted on `Global Economic Data.csv`:
@@ -66,23 +42,45 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 | GDP per Capita (in USD) | Float | GDP per person in USD |
 | Population (in Millions) | Float | Total population (millions) |
 | CO2 Emissions (Million Metric Tons) | Float | Annual CO2 emissions (million metric tons) |
-| Human Development Index (HDI) | Float | HDI index (0–1 or 0–100 — validate units) |
 | Renewable Energy Share (%) | Float | Share of energy from renewables (percent) |
-| Internet Penetration (%) | Float | Share of population using the internet (percent) |
-| Healthcare Expenditure per Capita (USD) | Float | Annual healthcare spending per person (USD) |
 
+
+## 🎯 Problem Statement
+
+* **What is the problem?** As major global economies grow, their adoption of clean energy is not keeping pace with their industrial energy demands.
+* **Why is it a problem?** Economic growth remains heavily reliant on fossil fuels, keeping CO2 emissions persistently high across top powers.
+* **What happens if we don't fix it?** Failing to decouple GDP from carbon emissions will worsen climate risks, increase regulatory costs, and undermine future economic resilience.
+---
+
+## ❓ Core Research Questions
+1. **Decoupling Analysis:** Are major economies successfully decoupling economic growth (GDP) from total CO2 emissions over time?
+2. **Energy Mix Evolution:** How has the share of renewable energy evolved relative to total energy consumption across developed vs. developing economies?
+3. **Environmental Footprint:** What is the relationship between industrial activity and resource consumption across nations?
 
 ---
 
-## Core Insights & Trends Explored
+## 📊 Dashboard Architecture & Layout Plan
+Your dashboard can be built using tools like **Power BI, Tableau, Streamlit, or Dash** structured across 4 sections:
+* **Top KPI Banner:** Total GDP ($ Trillion), Total CO2 Emissions, Renewable Energy Share (%), Forest Coverage (%).
+* **Chart 1 (Time-Series Dual-Axis):** GDP vs. CO2 Emissions trajectories over time.
+* **Chart 2 (Multi-Line Chart):** Renewable Energy Share (%) trends across countries (2000–2023).
+* **Chart 3 (Scatter / Bubble Plot):** GDP per Capita vs. CO2 Emissions (Environmental Kuznets Curve concept).
 
-### 📊 Metric A: Long-Term Growth Shifts (GDP Trends)
-* **Emerging vs Developed Liftoff:** Dynamic divergence between established markets (e.g., US, Germany) maintaining steady, linear growth versus developing powerhouses (e.g., China, India) experiencing exponential upward curves.
-* **Macro Shocks:** Visually evident disruptions during the **2008 Global Financial Crisis** and the **2020 COVID-19 pandemic**, where sudden drop-offs hit aggregate production across almost all monitored territories.
+---
 
-### 📈 Metric B: Inflationary Environments (Price Stability)
-* **Volatility Distributions:** Distinct distributions between highly stable inflation blocks (e.g., Eurozone, Japan) vs volatile price fluctuations in emerging South American or African economies.
-* **Post-Pandemic Surge:** Visible uptick across multiple clusters during the 2021–2023 cycle reflecting global supply-side crunches and quantitative easing pullbacks.
+## 🐍 Python EDA & Visualization Script (Google Colab Ready)
 
-### 💼 Metric C: Labor Markets & Structural Unemployment
-* **Economic Buffers:** Evaluation of how resilient domestic labor markets were when confronted by systemic global growth contractions. 
+You can run the following script inside a **Google Colab** notebook to automatically load your dataset, perform exploratory data analysis, and export the analysis charts.
+(https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh)
+
+
+## 🎯 Research Objectives
+
+### Descriptive Objectives
+1. **Macro-Trend Analysis:** Evaluate historical trends in GDP, energy consumption, and CO2 emissions across major global economies (2000–2023).
+2. **Energy Mix Comparison:** Contrast renewable energy adoption rates and structural energy dependencies between developed and emerging economies.
+3. **Resource Impact Mapping:** Examine how industrial activity and economic expansion correlate with land use and environmental footprints.
+
+### Predictive Objectives
+4. **EKC & Decoupling Modeling:** Apply polynomial regression to model the Environmental Kuznets Curve (EKC), predicting carbon intensity thresholds relative to GDP per capita growth.
+5. **Clean Energy Forecasting:** Utilize historical trend analysis and linear regression modeling to forecast future renewable energy share trajectories up to 2030.
