@@ -60,18 +60,13 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 ---
 
 ## 📊 Dashboard Architecture & Layout Plan
-Your dashboard can be built using tools like **Power BI, Tableau, Streamlit, or Dash** structured across 4 sections:
-* **Top KPI Banner:** Total GDP ($ Trillion), Total CO2 Emissions, Renewable Energy Share (%), Forest Coverage (%).
-* **Chart 1 (Time-Series Dual-Axis):** GDP vs. CO2 Emissions trajectories over time.
-* **Chart 2 (Multi-Line Chart):** Renewable Energy Share (%) trends across countries (2000–2023).
-* **Chart 3 (Scatter / Bubble Plot):** GDP per Capita vs. CO2 Emissions (Environmental Kuznets Curve concept).
 
 ---
 
-## 🐍 Python EDA & Visualization Script (Google Colab Ready)
+## 🐍 Python EDA & Visualization Script
 
-You can run the following script inside a **Google Colab** notebook to automatically load your dataset, perform exploratory data analysis, and export the analysis charts.
-(https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh)
+Run (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh) script inside a **Google Colab** notebook to automatically load dataset, perform exploratory data analysis, and export the analysis charts.
+
 
 
 ## 🎯 Research Objectives
