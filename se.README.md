@@ -1,4 +1,4 @@
-**Capstone Project: Global Economic Analysis **
+**Capstone Project: Global Economic Analysis**
 * Prepared By: Siti Ekbal
 * Dataset Used: Global Economic Data
 
@@ -17,7 +17,7 @@ The goal of this repository is to provide a clean exploratory data analysis (EDA
 Raw CSV (source):
 https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/main/Global%20Economic%20Data.csv
 
-## Dataset Overview & Data Cleaning
+# 🧼 Data Cleaning Results Summary
 Before running statistical evaluations, a comprehensive sanity check was conducted on `Global Economic Data.csv`:
 * **Shape:** Balanced panel data covering multiple countries across 24 consecutive years.
 * **Missing Value Treatment:** Imputation/removal steps implemented for missing values to maintain data continuity.
@@ -29,7 +29,10 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 * **Skew & outliers:** CO2 emissions & energy use are skewed — consider log transforms or per-capita normalization for modeling.
 * **Derived checks:** recompute GDP per capita from GDP and population to detect inconsistencies.
 * **Implication:** The lack of a strong, positive, statistically significant link between GDP growth and emission increases suggests that these nations are successfully undergoing **structural decoupling**, where economic expansion no longer guarantees a proportional rise in greenhouse gas emissions.
-
+* **Whitespace Removal:** Standardized all **36 column names** by stripping trailing/leading whitespaces.
+* **Duplicate Check:** The dataset contains **0 duplicate rows** out of the 144 records.
+* **Missing Value Check:** Checked all **36 columns** comprehensively, and no missing (null) values were detected.
+* **Final Dataset Dimensions:** The cleaned dataset remains perfectly intact with **144 rows and 36 columns**.
 
 
 ## Data dictionary
