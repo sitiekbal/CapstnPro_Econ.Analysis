@@ -64,7 +64,7 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 
 ## 📊 Dashboard Architecture & Layout Plan
 
-<img width="780" height="346" alt="image" src="https://github.com/user-attachments/assets/c4cb1b7a-30a9-437c-ab69-25ff57d5c110" />
+
 
 
 
