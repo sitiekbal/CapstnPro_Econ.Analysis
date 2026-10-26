@@ -1,0 +1,10 @@
+# Frequently Asked Questions (FAQ)
+
+### 1. What dataset is used in this project?
+This project uses `Global Economic Data.csv`, covering 6 major economies (USA, Russia, Canada, China, India, Australia) from 2000 to 2023.
+
+### 2. How do I run the Streamlit application?
+Make sure you have Python installed, then run the following commands in your terminal:
+```bash
+pip install -r requirements.txt
+streamlit run app.py
