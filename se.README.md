@@ -96,4 +96,8 @@ Run (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#s
 
 https://sinister-spooky-phantasm-r7p7pxqpg99g3x5g9-8501.app.github.dev
 
-## FAQ
+## Tools used
+
+* Python 3
+* Colab Notebooks
+* Power BI
