@@ -93,6 +93,6 @@ Run (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#s
 4. **EKC & Decoupling Modeling:** Apply polynomial regression to model the Environmental Kuznets Curve (EKC), predicting carbon intensity thresholds relative to GDP per capita growth.
 5. **Clean Energy Forecasting:** Utilize historical trend analysis and linear regression modeling to forecast future renewable energy share trajectories up to 2030.
 
-6. https://sinister-spooky-phantasm-r7p7pxqpg99g3x5g9-8501.app.github.dev
+https://sinister-spooky-phantasm-r7p7pxqpg99g3x5g9-8501.app.github.dev
 
-7. ## FAQ
+## FAQ
