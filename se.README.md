@@ -64,6 +64,7 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 
 ## 📊 Dashboard Architecture & Layout Plan
 
+GEA.pbix 
 
 <img width="1030" height="588" alt="image" src="https://github.com/user-attachments/assets/b9369e4d-1302-4116-8599-23f8a509ca5c" />
 
