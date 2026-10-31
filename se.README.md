@@ -35,7 +35,7 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 * **Final Dataset Dimensions:** The cleaned dataset remains perfectly intact with **144 rows and 36 columns**.
 
 
-## Data dictionary
+## 📚 Data Dictionary
 
 | Column | Type | Description |
 | :--- | :--- | :--- |
@@ -83,7 +83,7 @@ Run (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#s
 
 
 
-## 🎯 Research Objectives
+## 🧠 Research Objectives
 
 ### Descriptive Objectives
 1. **Macro-Trend Analysis:** Evaluate historical trends in GDP, energy consumption, and CO2 emissions across major global economies (2000–2023).
@@ -96,7 +96,7 @@ Run (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#s
 
 https://sinister-spooky-phantasm-r7p7pxqpg99g3x5g9-8501.app.github.dev
 
-## Key Findings
+## 🔍 Key Findings
 
 - Economic growth has not always resulted in a proportional increase in CO2 emissions across major economies.
 - Some countries appear to be decoupling GDP growth from carbon-intensive production through improved efficiency and energy transition efforts.
@@ -104,11 +104,11 @@ https://sinister-spooky-phantasm-r7p7pxqpg99g3x5g9-8501.app.github.dev
 - Industrial expansion and fossil fuel dependence continue to exert significant pressure on environmental sustainability.
 - Structural policy reforms and investment in clean energy are necessary to support long-term economic resilience.
 
-## Conclusion
+## ✅ Conclusion
 
 Overall, the results suggest that while progress toward a greener growth model is evident, significant challenges remain. The transition to a low-carbon economy is advancing, but it is not yet occurring at a pace sufficient to fully offset the environmental impacts of industrialization and rising energy demand. This highlights the need for stronger policy action, greater renewable energy investment, and more effective decarbonization strategies to ensure that future economic growth is both sustainable and environmentally responsible.
 
-## Tools used
+## ⚙️ Tools Used
 
 * Python 3
 * Colab Notebooks
