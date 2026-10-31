@@ -7,17 +7,19 @@
 
 # 🌍 Global Economic Data & Green Transition Analysis (2000–2023)
 
+
 ## 📌 Project Overview
 This project investigates the macro-level relationships between **economic growth (GDP)**, **energy consumption**, **renewable energy adoption**, and **CO2 emissions** across 6 major global economies (**USA, Russia, Canada, China, India, Australia**) from **2000 to 2023**. 
 
 The goal of this repository is to provide a clean exploratory data analysis (EDA) pipeline and blueprint for an interactive dashboard that visualizes how major powers are balancing economic expansion with environmental sustainability.
 
----
 
 Raw CSV (source):
 https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/main/Global%20Economic%20Data.csv
 
-# 🧼 Data Cleaning Results Summary
+
+## 🧼 Data Cleaning Results Summary
+
 Before running statistical evaluations, a comprehensive sanity check was conducted on `Global Economic Data.csv`:
 * **Shape:** Balanced panel data covering multiple countries across 24 consecutive years.
 * **Missing Value Treatment:** Imputation/removal steps implemented for missing values to maintain data continuity.
@@ -53,14 +55,13 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 * **What is the problem?** As major global economies grow, their adoption of clean energy is not keeping pace with their industrial energy demands.
 * **Why is it a problem?** Economic growth remains heavily reliant on fossil fuels, keeping CO2 emissions persistently high across top powers.
 * **What happens if we don't fix it?** Failing to decouple GDP from carbon emissions will worsen climate risks, increase regulatory costs, and undermine future economic resilience.
----
+
 
 ## ❓ Core Research Questions
 1. **Decoupling Analysis:** Are major economies successfully decoupling economic growth (GDP) from total CO2 emissions over time?
 2. **Energy Mix Evolution:** How has the share of renewable energy evolved relative to total energy consumption across developed vs. developing economies?
 3. **Environmental Footprint:** What is the relationship between industrial activity and resource consumption across nations?
 
----
 
 ## 📊 Dashboard Architecture & Layout Plan
 
@@ -75,12 +76,10 @@ Before running statistical evaluations, a comprehensive sanity check was conduct
 
 
 
----
 
 ## 🐍 Python EDA & Visualization Script
 
 Run (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#scrollTo=IGlvnoX-nfGh) script inside a **Google Colab** notebook to automatically load dataset, perform exploratory data analysis, and export the analysis charts.
-
 
 
 ## 🧠 Research Objectives
@@ -96,6 +95,7 @@ Run (https://colab.research.google.com/drive/1EBd3SasNLBp9WaRmOErxjXsdkQPkPQlU#s
 
 https://sinister-spooky-phantasm-r7p7pxqpg99g3x5g9-8501.app.github.dev
 
+
 ## 🔍 Key Findings
 
 - Economic growth has not always resulted in a proportional increase in CO2 emissions across major economies.
@@ -104,9 +104,11 @@ https://sinister-spooky-phantasm-r7p7pxqpg99g3x5g9-8501.app.github.dev
 - Industrial expansion and fossil fuel dependence continue to exert significant pressure on environmental sustainability.
 - Structural policy reforms and investment in clean energy are necessary to support long-term economic resilience.
 
+
 ## ✅ Conclusion
 
 Overall, the results suggest that while progress toward a greener growth model is evident, significant challenges remain. The transition to a low-carbon economy is advancing, but it is not yet occurring at a pace sufficient to fully offset the environmental impacts of industrialization and rising energy demand. This highlights the need for stronger policy action, greater renewable energy investment, and more effective decarbonization strategies to ensure that future economic growth is both sustainable and environmentally responsible.
+
 
 ## ⚙️ Tools Used
 
