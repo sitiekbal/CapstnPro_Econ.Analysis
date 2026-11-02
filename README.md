@@ -22,12 +22,7 @@ https://raw.githubusercontent.com/sitiekbal/CapstnPro_Econ.Analysis/refs/heads/m
 
 Before running statistical evaluations, a comprehensive sanity check was conducted on `Global Economic Data.csv`:
 * **Shape:** Balanced panel data covering multiple countries across 24 consecutive years.
-* **Missing Value Treatment:** Imputation/removal steps implemented for missing values to maintain data continuity.
-* **Outlier Verification:** Hyperinflation instances and abnormal spikes in unemployment were validated against historic historical economic narratives rather than treated purely as mechanical noise.
-* **Missingness:** run a full missingness audit — the pasted CSV shows few blank cells but validate programmatically.
-* **Units:** confirm whether HDI and Gender Equality Index are 0–1 or 0–100 and rescale consistently.
 * **GDP:** is in trillions and population in millions. Quick check: `computed_GDP_per_capita ≈ (GDP_in_Trillions_USD * 1_000_000) / Population_in_Millions`.
-* **Implausible values:** literacy slightly >100 in some rows; cap at 100 or verify source.
 * **Skew & outliers:** CO2 emissions & energy use are skewed — consider log transforms or per-capita normalization for modeling.
 * **Derived checks:** recompute GDP per capita from GDP and population to detect inconsistencies.
 * **Implication:** The lack of a strong, positive, statistically significant link between GDP growth and emission increases suggests that these nations are successfully undergoing **structural decoupling**, where economic expansion no longer guarantees a proportional rise in greenhouse gas emissions.
